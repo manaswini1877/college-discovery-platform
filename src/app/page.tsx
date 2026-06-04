@@ -66,23 +66,31 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <header className="relative overflow-hidden bg-gradient-to-b from-[#eff6ff] to-[#dbeafe] py-16 text-center border-b border-[#e5e7eb] shadow-sm">
-        {/* Decorative Grid BG */}
-        <div className="absolute inset-0 opacity-50" />
-        
-        <div className="relative mx-auto max-w-4xl px-4 flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[#e5e7eb] bg-white px-4 py-1.5 text-xs font-bold text-[#1a1a1a]">
-            <GraduationCap className="h-4 w-4" />
-            Discover Colleges across India
+      <header className="relative overflow-hidden bg-gradient-to-b from-[#eff6ff] via-white to-[#dbeafe] py-16 text-center border-b border-[#e5e7eb] shadow-sm">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(26,115,232,0.12),_transparent_45%)]" />
+        <div className="relative mx-auto max-w-6xl px-4 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] items-center">
+          <div className="mx-auto max-w-2xl text-left">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#e5e7eb] bg-white px-4 py-1.5 text-xs font-bold text-[#1a1a1a] shadow-sm">
+              <GraduationCap className="h-4 w-4 text-[#1a73e8]" />
+              Discover Colleges across India
+            </div>
+            <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-[#1a1a1a] sm:text-5xl lg:text-6xl">
+              A professional college discovery platform for smart decisions
+            </h1>
+            <p className="mt-4 text-base sm:text-lg text-[#6b7280] max-w-2xl">
+              Compare fees, placements, reviews, and admission probability in one clean interface built for serious students.
+            </p>
+            <div className="mt-8 w-full max-w-2xl">
+              <CollegeSearch initialSearch={search} onSearchChange={handleSearchChange} />
+            </div>
           </div>
-          <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-[#1a1a1a] sm:text-5xl lg:text-6xl">
-            Find Your Dream College
-          </h1>
-          <p className="mt-4 text-base sm:text-lg text-[#6b7280] max-w-2xl">
-            Compare annual fees, student reviews, placement packages, and predict your admission probability based on exam cutoff ranks.
-          </p>
-          <div className="mt-8 w-full max-w-2xl">
-            <CollegeSearch initialSearch={search} onSearchChange={handleSearchChange} />
+
+          <div className="relative mx-auto w-full max-w-xl overflow-hidden rounded-[2rem] border border-[#e5e7eb] bg-white shadow-lg shadow-slate-200/50">
+            <img
+              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1100&q=80"
+              alt="Campus entrance"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
       </header>
@@ -104,25 +112,25 @@ export default function Home() {
 
           {/* Mobile Filter Toggle Buttons */}
           <div className="flex lg:hidden items-center justify-between">
-            <span className="text-sm font-semibold text-slate-400">
+            <span className="text-sm font-semibold text-[#6b7280]">
               Showing {totalResults} {totalResults === 1 ? "college" : "colleges"}
             </span>
             <button
               onClick={() => setIsMobileFiltersOpen(!isMobileFiltersOpen)}
-              className="flex items-center gap-2 rounded-xl border border-slate-800 bg-slate-900 px-4 py-2.5 text-sm font-semibold text-slate-205 cursor-pointer"
+              className="flex items-center gap-2 rounded-xl border border-[#e5e7eb] bg-white px-4 py-2.5 text-sm font-semibold text-[#1a1a1a] shadow-sm hover:bg-[#f3f4f6] transition"
             >
-              <SlidersHorizontal className="h-4 w-4 text-indigo-400" />
+              <SlidersHorizontal className="h-4 w-4 text-[#1a73e8]" />
               Toggle Filters
             </button>
           </div>
 
           {/* Mobile Filters Drawer (Overlay) */}
           {isMobileFiltersOpen && (
-            <div className="lg:hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm p-4 overflow-y-auto">
+            <div className="lg:hidden fixed inset-0 z-50 bg-white/95 p-4 overflow-y-auto">
               <div className="flex justify-end mb-4">
                 <button
                   onClick={() => setIsMobileFiltersOpen(false)}
-                  className="rounded-full border border-slate-850 bg-slate-900 p-2 text-slate-400 hover:text-white"
+                  className="rounded-full border border-[#e5e7eb] bg-white p-2 text-[#6b7280] hover:text-[#1a1a1a]"
                 >
                   ✕ Close
                 </button>
@@ -143,15 +151,15 @@ export default function Home() {
 
           {/* College Results Content Grid */}
           <div className="flex-1 space-y-8">
-            <div className="hidden lg:flex items-center justify-between border-b border-slate-900 pb-3">
-              <h2 className="text-lg font-bold text-slate-100 flex items-center gap-2">
-                <BookOpen className="h-5 w-5 text-indigo-400" />
+            <div className="hidden lg:flex items-center justify-between border-b border-[#e5e7eb] pb-3">
+              <h2 className="text-lg font-bold text-[#1a1a1a] flex items-center gap-2">
+                <BookOpen className="h-5 w-5 text-[#1a73e8]" />
                 All Listings
-                <span className="text-xs font-medium text-slate-400 bg-slate-900 px-2 py-0.5 rounded-full border border-slate-800">
+                <span className="text-xs font-medium text-[#6b7280] bg-[#f8fafc] px-2 py-0.5 rounded-full border border-[#e5e7eb]">
                   {totalResults} matches
                 </span>
               </h2>
-              <span className="text-xs text-slate-500 font-semibold">
+              <span className="text-xs text-[#6b7280] font-semibold">
                 Page {page} of {totalPages}
               </span>
             </div>
@@ -164,18 +172,18 @@ export default function Home() {
                 <button
                   onClick={() => handlePageChange(page - 1)}
                   disabled={page === 1}
-                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 hover:bg-slate-900/80 text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#e5e7eb] bg-white hover:bg-[#f3f4f6] text-[#6b7280] hover:text-[#1a1a1a] disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
                   aria-label="Previous Page"
                 >
                   <ChevronLeft className="h-5 w-5" />
                 </button>
-                <span className="text-sm font-semibold text-slate-300">
-                  Page <span className="text-white font-bold">{page}</span> of {totalPages}
+                <span className="text-sm font-semibold text-[#6b7280]">
+                  Page <span className="text-[#1a1a1a] font-bold">{page}</span> of {totalPages}
                 </span>
                 <button
                   onClick={() => handlePageChange(page + 1)}
                   disabled={page === totalPages}
-                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 hover:bg-slate-900/80 text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-[#e5e7eb] bg-white hover:bg-[#f3f4f6] text-[#6b7280] hover:text-[#1a1a1a] disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer"
                   aria-label="Next Page"
                 >
                   <ChevronRight className="h-5 w-5" />

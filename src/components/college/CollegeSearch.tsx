@@ -46,7 +46,7 @@ export default function CollegeSearch({ initialSearch, onSearchChange }: College
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Search colleges by name, city, or state..."
-        className="w-full rounded-2xl border border-slate-800 bg-slate-900/30 py-4.5 pr-12 pl-12 text-base text-slate-100 placeholder-slate-500 outline-none backdrop-blur-md transition-all focus:border-indigo-500/80 focus:ring-1 focus:ring-indigo-500/80"
+        className="w-full rounded-2xl border border-[#e5e7eb] bg-white py-4.5 pr-12 pl-12 text-base text-[#1a1a1a] placeholder-[#6b7280] outline-none transition-all focus:border-[#1a73e8] focus:ring-1 focus:ring-[#c7d2fe]"
       />
       {value && (
         <button

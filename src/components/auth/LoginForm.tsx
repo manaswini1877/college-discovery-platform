@@ -58,8 +58,8 @@ export default function LoginForm() {
   return (
     <div className="w-full space-y-6">
       <div className="text-center">
-        <h2 className="text-2xl font-extrabold tracking-tight text-white">Welcome Back</h2>
-        <p className="mt-1.5 text-sm text-slate-400">Sign in to sync your favorites and predictions</p>
+        <h2 className="text-2xl font-extrabold tracking-tight text-[#1a1a1a]">Welcome Back</h2>
+        <p className="mt-1.5 text-sm text-[#6b7280]">Sign in to sync your favorites and predictions</p>
       </div>
 
       {error && (
@@ -84,7 +84,7 @@ export default function LoginForm() {
               placeholder="name@example.com"
               required
               disabled={isLoading}
-              className="w-full rounded-xl border border-slate-800 bg-slate-950 px-4 py-3 pl-11 text-sm text-slate-200 placeholder-slate-650 outline-none focus:border-indigo-500/80 focus:ring-1 focus:ring-indigo-500/80 disabled:opacity-50"
+              className="w-full rounded-xl border border-[#e5e7eb] bg-white px-4 py-3 pl-11 text-sm text-[#1a1a1a] placeholder-[#6b7280] outline-none focus:border-[#1a73e8] focus:ring-1 focus:ring-[#c7d2fe] disabled:opacity-50"
             />
           </div>
         </div>
@@ -105,13 +105,13 @@ export default function LoginForm() {
               placeholder="••••••••"
               required
               disabled={isLoading}
-              className="w-full rounded-xl border border-slate-800 bg-slate-950 px-4 py-3 pr-11 pl-11 text-sm text-slate-200 placeholder-slate-650 outline-none focus:border-indigo-500/80 focus:ring-1 focus:ring-indigo-500/80 disabled:opacity-50"
+              className="w-full rounded-xl border border-[#e5e7eb] bg-white px-4 py-3 pr-11 pl-11 text-sm text-[#1a1a1a] placeholder-[#6b7280] outline-none focus:border-[#1a73e8] focus:ring-1 focus:ring-[#c7d2fe] disabled:opacity-50"
             />
             <button
               type="button"
               onClick={togglePasswordVisibility}
               disabled={isLoading}
-              className="absolute inset-y-0 right-4 flex items-center text-slate-550 hover:text-slate-200 transition-colors cursor-pointer"
+              className="absolute inset-y-0 right-4 flex items-center text-[#6b7280] hover:text-[#1a1a1a] transition-colors cursor-pointer"
             >
               {showPassword ? <EyeOff className="h-4.5 w-4.5" /> : <Eye className="h-4.5 w-4.5" />}
             </button>
@@ -122,7 +122,7 @@ export default function LoginForm() {
         <button
           type="submit"
           disabled={isLoading}
-          className="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-650 hover:bg-indigo-600 py-3 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 hover:scale-[1.01] transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#1a73e8] hover:bg-[#1558b0] py-3 text-sm font-bold text-white shadow-lg shadow-[#1a73e8]/20 hover:scale-[1.01] transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isLoading ? (
             <>

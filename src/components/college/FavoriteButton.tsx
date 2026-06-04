@@ -35,8 +35,8 @@ export default function FavoriteButton({ collegeId }: { collegeId: string }) {
       disabled={toggleFavorite.isPending}
       className={`flex items-center gap-2 rounded-xl border py-3 px-5 text-sm font-bold shadow-md cursor-pointer transition-all hover:scale-[1.01] active:scale-[0.99] ${
         isFavorite
-          ? "bg-rose-500/20 border-rose-500/50 text-rose-300 hover:bg-rose-500/25"
-          : "bg-slate-900 border-slate-800 text-slate-300 hover:border-slate-700 hover:text-white"
+          ? "bg-rose-100 border-rose-200 text-rose-600 hover:bg-rose-200"
+          : "bg-white border-[#e5e7eb] text-[#6b7280] hover:border-[#1a73e8] hover:text-[#1a1a1a]"
       }`}
     >
       <Heart className={`h-4.5 w-4.5 transition-colors ${isFavorite ? "fill-rose-500 text-rose-500" : ""}`} />

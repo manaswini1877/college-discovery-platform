@@ -52,7 +52,7 @@ export default function CollegeCard({ college }: CollegeCardProps) {
       className="group relative flex flex-col overflow-hidden rounded-2xl card transition-all duration-300 hover:-translate-y-1"
     >
       {/* College Image */}
-      <div className="relative aspect-video w-full overflow-hidden bg-gray-50">
+      <div className="relative aspect-video w-full overflow-hidden bg-[#f8fafc]">
         {!imgError ? (
           <img
             src={college.imageUrl || `https://picsum.photos/seed/${encodeURIComponent(college.name)}/800/400`}
@@ -62,8 +62,8 @@ export default function CollegeCard({ college }: CollegeCardProps) {
             onError={() => setImgError(true)}
           />
         ) : (
-          <div className="h-full w-full flex items-center justify-center bg-gray-100">
-            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#1a73e8] text-white font-bold text-xl">
+          <div className="h-full w-full flex items-center justify-center bg-[#eff6ff]">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#1a73e8] text-white font-bold text-xl shadow-sm">
               {college.name.split(" ").map((s) => s[0]).slice(0,2).join("")}
             </div>
           </div>
@@ -142,31 +142,31 @@ export default function CollegeCard({ college }: CollegeCardProps) {
 
 export function CollegeCardSkeleton() {
   return (
-    <div className="flex flex-col overflow-hidden rounded-2xl border border-slate-850 bg-slate-900/30 animate-pulse">
+    <div className="flex flex-col overflow-hidden rounded-2xl border border-[#e5e7eb] bg-white animate-pulse">
       {/* Image Skeleton */}
-      <div className="relative aspect-video w-full bg-slate-800" />
+      <div className="relative aspect-video w-full bg-[#f8fafc]" />
 
       {/* Content Skeleton */}
       <div className="flex flex-1 flex-col p-5 space-y-4">
         <div className="space-y-2">
-          <div className="h-5 w-3/4 rounded bg-slate-800" />
-          <div className="h-3.5 w-1/2 rounded bg-slate-800" />
+          <div className="h-5 w-3/4 rounded bg-[#e5e7eb]" />
+          <div className="h-3.5 w-1/2 rounded bg-[#e5e7eb]" />
         </div>
 
-        <div className="grid grid-cols-2 gap-3 py-3 border-y border-slate-850">
+        <div className="grid grid-cols-2 gap-3 py-3 border-y border-[#e5e7eb]">
           <div className="space-y-1">
-            <div className="h-2.5 w-12 rounded bg-slate-800" />
-            <div className="h-4.5 w-20 rounded bg-slate-800" />
+            <div className="h-2.5 w-12 rounded bg-[#e5e7eb]" />
+            <div className="h-4.5 w-20 rounded bg-[#e5e7eb]" />
           </div>
           <div className="space-y-1">
-            <div className="h-2.5 w-16 rounded bg-slate-800" />
-            <div className="h-4.5 w-16 rounded bg-slate-800" />
+            <div className="h-2.5 w-16 rounded bg-[#e5e7eb]" />
+            <div className="h-4.5 w-16 rounded bg-[#e5e7eb]" />
           </div>
         </div>
 
         <div className="flex items-center justify-between">
-          <div className="h-3.5 w-16 rounded bg-slate-800" />
-          <div className="h-3.5 w-28 rounded bg-slate-800" />
+          <div className="h-3.5 w-16 rounded bg-[#e5e7eb]" />
+          <div className="h-3.5 w-28 rounded bg-[#e5e7eb]" />
         </div>
       </div>
     </div>
