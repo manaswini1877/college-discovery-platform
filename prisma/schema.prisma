@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String     @id @default(uuid())
+  name      String
+  email     String     @unique
+  password  String
+  favorites Favorite[]
+  createdAt DateTime   @default(now())
+}
+
+model College {
+  id             String     @id @default(uuid())
+  name           String
+  city           String
+  state          String
+  fees           Int
+  rating         Float
+  placement      Int
+  highestPackage Int
+  averagePackage Int
+  description    String
+  imageUrl       String?
+  established    Int?
+  type           String
+  courses        Course[]
+  reviews        Review[]
+  favorites      Favorite[]
+  cutoffs        Cutoff[]
+  createdAt      DateTime   @default(now())
+}
+
+model Course {
+  id        String  @id @default(uuid())
+  name      String
+  duration  String
+  fees      Int
+  collegeId String
+  college   College @relation(fields: [collegeId], references: [id])
+}
+
+model Review {
+  id          String   @id @default(uuid())
+  studentName String
+  rating      Float
+  comment     String
+  collegeId   String
+  college     College  @relation(fields: [collegeId], references: [id])
+  createdAt   DateTime @default(now())
+}
+
+model Favorite {
+  id        String  @id @default(uuid())
+  userId    String
+  collegeId String
+  user      User    @relation(fields: [userId], references: [id])
+  college   College @relation(fields: [collegeId], references: [id])
+
+  @@unique([userId, collegeId])
+}
+
+model Cutoff {
+  id        String  @id @default(uuid())
+  collegeId String
+  college   College @relation(fields: [collegeId], references: [id])
+  exam      String
+  category  String
+  year      Int
+  openRank  Int
+  closeRank Int
+}
