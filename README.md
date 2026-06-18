@@ -1,11 +1,15 @@
-🎓 College Compass – College Discovery & Admission Prediction Platform
+# 🎓 College Compass – College Discovery & Admission Prediction Platform
 
 A modern full-stack web application that helps students discover, compare, and evaluate colleges across India. The platform provides advanced search, filtering, college comparison, admission prediction based on entrance exam ranks, user authentication, and personalized favorites management.
 
-🌐 Live Demo
+## 🌐 Live Demo
 
-Live Website:https://college-discovery-platform-e3g4.onrender.com
-📖 Overview
+**Live Website:** https://college-discovery-platform-e3g4.onrender.com
+
+---
+
+## 📖 Overview
+
 Choosing the right college can be overwhelming due to the large amount of information available across multiple sources. College Compass simplifies this process by bringing college details, placements, courses, reviews, and admission prediction into a single platform.
 
 Students can:
@@ -17,14 +21,17 @@ Students can:
 * Save favorite colleges for future reference
 * Access detailed college information and placement statistics
 
-✨ Features
+---
 
-🔍 Smart College Search
+## ✨ Features
+
+### 🔍 Smart College Search
+
 * Search colleges by name, city, or state
 * Instant search results
 * Responsive search experience
 
- 🎯 Advanced Filters
+### 🎯 Advanced Filters
 
 Filter colleges by:
 
@@ -34,11 +41,11 @@ Filter colleges by:
 * Student Rating
 * Placement Statistics
 
- 🏛 College Detail Pages
+### 🏛 College Detail Pages
 
 Each college contains:
 
-Overview
+#### Overview
 
 * College information
 * Location
@@ -46,25 +53,25 @@ Overview
 * Description
 * College type
 
-Courses
+#### Courses
 
 * Available programs
 * Course duration
 * Fee structure
 
-Placements
+#### Placements
 
 * Placement percentage
 * Highest package
 * Average package
 * Placement insights
 
-Reviews
+#### Reviews
 
 * Student ratings
 * Feedback and reviews
 
-⚖️ College Comparison
+### ⚖️ College Comparison
 
 Compare up to 3 colleges side-by-side.
 
@@ -81,11 +88,11 @@ Comparison includes:
 
 Best-performing values are automatically highlighted for easier decision making.
 
-🎓 Admission Predictor
+### 🎓 Admission Predictor
 
 Predict admission chances based on:
 
- Supported Exams
+#### Supported Exams
 
 * JEE Main
 * JEE Advanced
@@ -93,7 +100,7 @@ Predict admission chances based on:
 * TS EAPCET
 * And more
 
-Supported Categories
+#### Supported Categories
 
 * General
 * OBC
@@ -111,7 +118,7 @@ The system analyzes cutoff data and categorizes colleges into:
 * 🟡 Medium Chance
 * 🔴 Low Chance
 
-❤️ Favorites System
+### ❤️ Favorites System
 
 Authenticated users can:
 
@@ -119,7 +126,7 @@ Authenticated users can:
 * Remove favorites
 * Access saved colleges anytime
 
-🔐 Secure Authentication
+### 🔐 Secure Authentication
 
 Features include:
 
@@ -129,11 +136,13 @@ Features include:
 * Password hashing using bcrypt
 * Protected routes and middleware
 
-📊 Database Coverage
+---
+
+## 📊 Database Coverage
 
 The platform contains 60+ Indian colleges including:
 
-IITs
+### IITs
 
 * IIT Bombay
 * IIT Delhi
@@ -143,20 +152,20 @@ IITs
 * IIT Roorkee
 * IIT Hyderabad
 
-NITs
+### NITs
 
 * NIT Trichy
 * NIT Warangal
 * NIT Surathkal
 * NIT Calicut
 
-IIITs
+### IIITs
 
 * IIIT Hyderabad
 * IIIT Bangalore
 * IIIT Delhi
 
-Andhra Pradesh Colleges
+### Andhra Pradesh Colleges
 
 * Shri Vishnu Engineering College for Women
 * Gayatri Vidya Parishad
@@ -169,7 +178,9 @@ Andhra Pradesh Colleges
 
 and many more.
 
-🛠 Tech Stack
+---
+
+## 🛠 Tech Stack
 
 ### Frontend
 
